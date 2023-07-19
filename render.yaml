@@ -1,14 +1,8 @@
 services:
 - type: web
-  name: trigger-v2-render-demo # Change this to your preferred app name
+  name: trigger-v2-render-demo
   env: docker
-  build:
-    image: "ghcr.io/triggerdotdev/trigger.dev:latest"
-  httpHealthCheck:
-    path: "/healthcheck"
-    interval: 15
-    timeout: 10
-    initialDelaySeconds: 30
+  image: "ghcr.io/triggerdotdev/trigger.dev:latest"
   autoDeploy: true
   envVars:
   - key: MAGIC_LINK_SECRET

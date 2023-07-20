@@ -1,15 +1,7 @@
 services:
 - type: web
   name: trigger-v2-render-demo # Change this to your preferred app name
-  runtime: docker
-  build:
-    image: "ghcr.io/triggerdotdev/trigger.dev:latest"
-  httpHealthCheck:
-    path: "/healthcheck"
-    interval: 15
-    timeout: 10
-    initialDelaySeconds: 30
-  autoDeploy: true
+  dockerfilePath: Dockerfile # This assumes your Dockerfile is in the root directory of your repository
   envVars:
   - key: MAGIC_LINK_SECRET
     sync: false
@@ -25,7 +17,8 @@ services:
     sync: false
   - key: RESEND_API_KEY
     sync: false
-  - key: AUTH_GITHUB_CLIENT_ID
+   - key: AUTH_GITHUB_CLIENT_ID
     sync: false # Optional for GitHub OAuth
   - key: AUTH_GITHUB_CLIENT_SECRET
     sync: false # Optional for GitHub OAuth
+  autoDeploy: true

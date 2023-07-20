@@ -1,24 +1,24 @@
 services:
-- type: web
-  name: trigger-v2-render-demo # Change this to your preferred app name
-  dockerfilePath: Dockerfile # This assumes your Dockerfile is in the root directory of your repository
-  envVars:
-  - key: MAGIC_LINK_SECRET
-    sync: false
-  - key: SESSION_SECRET
-    sync: false
-  - key: LOGIN_ORIGIN
-    sync: false
-  - key: APP_ORIGIN
-    sync: false
-  - key: FROM_EMAIL
-    sync: false
-  - key: REPLY_TO_EMAIL
-    sync: false
-  - key: RESEND_API_KEY
-    sync: false
-   - key: AUTH_GITHUB_CLIENT_ID
-    sync: false # Optional for GitHub OAuth
-  - key: AUTH_GITHUB_CLIENT_SECRET
-    sync: false # Optional for GitHub OAuth
-  autoDeploy: true
+  - type: web
+    name: trigger-v2-render-demo # Change this to your preferred app name
+    dockerfilePath: Dockerfile # This assumes your Dockerfile is in the root directory of your repository
+    envVars:
+      - key: MAGIC_LINK_SECRET
+        sync: false
+      - key: SESSION_SECRET
+        sync: false
+      - key: LOGIN_ORIGIN
+        sync: false
+      - key: APP_ORIGIN
+        sync: false
+      - key: FROM_EMAIL
+        sync: false
+      - key: REPLY_TO_EMAIL
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: AUTH_GITHUB_CLIENT_ID
+        sync: false # Optional for GitHub OAuth
+      - key: AUTH_GITHUB_CLIENT_SECRET
+        sync: false # Optional for GitHub OAuth
+    autoDeploy: true

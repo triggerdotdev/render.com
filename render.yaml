@@ -1,7 +1,7 @@
 services:
 - type: web
   name: trigger-v2-render-demo # Change this to your preferred app name
-  env: docker
+  runtime: docker
   build:
     image: "ghcr.io/triggerdotdev/trigger.dev:latest"
   httpHealthCheck:

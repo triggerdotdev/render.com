@@ -1,6 +1,7 @@
 services:
   - type: web
     name: trigger-v2-render-demo # Change this to your preferred app name
+    runtime: docker
     dockerfilePath: Dockerfile # This assumes your Dockerfile is in the root directory of your repository
     envVars:
       - key: MAGIC_LINK_SECRET

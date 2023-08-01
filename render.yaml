@@ -4,6 +4,8 @@ services:
     runtime: docker
     dockerfilePath: Dockerfile # This assumes your Dockerfile is in the root directory of your repository
     envVars:
+      - key: ENCRYPTION_KEY
+        sync: false
       - key: MAGIC_LINK_SECRET
         sync: false
       - key: SESSION_SECRET
